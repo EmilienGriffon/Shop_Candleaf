@@ -1,0 +1,22 @@
+.navlink {
+    font-family: "Futur", sans-serif;
+    text-transform: uppercase;
+    padding: 10px;
+    color: black;
+    font-weight: 600;
+    font-size: 15px;
+    text-decoration: none;
+    transition: all 0.5s ease;
+  }
+  
+  .navlink:hover {
+    cursor: pointer;
+    color: #00a803;
+    text-decoration: underline;
+    text-underline-offset: 25px;
+    text-decoration-thickness: 3px;
+    @media (max-width: 768px) {
+      text-decoration: none;
+  
+  }
+  }

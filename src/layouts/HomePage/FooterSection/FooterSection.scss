@@ -1,0 +1,44 @@
+.footer {
+    background-color: #272727;
+    color: white;
+    padding: 40px 0;
+  
+    .footer__company {
+      margin-bottom: 20px;
+    }
+  
+    .footer__links {
+      margin-bottom: 20px;
+    }
+  
+    .footer__contact {
+      margin-bottom: 20px;
+  
+      .footer__socials {
+        display: flex;
+        gap: 15px;
+        margin-top: 10px;
+  
+        .footer__social-icon {
+          font-size: 24px;
+          transition: color 0.3s;
+          
+          &:hover {
+            color: #00a33f; 
+          }
+        }
+      }
+    }
+  
+    .footer__bottom {
+      border-top: 1px solid #fdfdfd;
+      padding-top: 15px;
+    }
+  
+    @media (max-width: 768px) {
+      .footer__company, .footer__links, .footer__contact {
+        text-align: center;
+      }
+    }
+  }
+  
