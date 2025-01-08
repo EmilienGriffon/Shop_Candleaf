@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { Link } from "react-router-dom"; 
 
@@ -11,19 +11,24 @@ import bougie6 from "../../../assets/bougies/bougie6.png";
 import bougie7 from "../../../assets/bougies/bougie7.png";
 import bougie8 from "../../../assets/bougies/bougie8.png";
 import "./ProductSection.scss";
+import productsData from "../../../data/products.json";
 
-const products = [
-  { id: 1, title: "Menthe épicée", image: bougie1, price: "9.99€" },
-  { id: 2, title: "Fraise sucrée", image: bougie2, price: "9.99€" },
-  { id: 3, title: "Myrtilles Fraîches", image: bougie3, price: "9.99€" },
-  { id: 4, title: "Citron juteux", image: bougie4, price: "9.99€" },
-  { id: 5, title: "Orange Fraîches", image: bougie5, price: "9.99€" },
-  { id: 6, title: "Cannelle parfumée", image: bougie6, price: "9.99€" },
-  { id: 7, title: "Cerises d'été", image: bougie7, price: "9.99€" },
-  { id: 8, title: "Lavande propre", image: bougie8, price: "9.99€" },
-];
+const imageMap = {
+    "bougie1": bougie1,
+    "bougie2": bougie2,
+    "bougie3": bougie3,
+    "bougie4": bougie4,
+    "bougie5": bougie5,
+    "bougie6": bougie6,
+    "bougie7": bougie7,
+    "bougie8": bougie8,
+};
 
 export default function ProductSection() {
+    const [products, setProducts] = useState([]);
+    useEffect(() => {
+      setProducts(productsData);
+    }, []);
   return (
     <Box className="section__products">
       <Container>
@@ -35,7 +40,7 @@ export default function ProductSection() {
           {products.map((product) => (
             <Link key={product.id} to={`/products/${product.id}`} className="product__link">
               <Box className="product__card">
-                <img src={product.image} alt={product.title} />
+                <img src={imageMap[product.image]} alt={product.title} />
                 <Typography variant="h6" color="black" fontWeight="bold">
                   {product.title}
                 </Typography>

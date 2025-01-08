@@ -1,13 +1,18 @@
 html {
     scroll-behavior: smooth;
   }
+
+body {
+    margin: 0;
+    overflow-y: auto;
+  }
   
   ::-webkit-scrollbar {
-    width: 20px; 
+    width: 10px; 
   }
   
   ::-webkit-scrollbar-track {
-    background: #000000;
+    background: #9c9c9c;
   }
   
   ::-webkit-scrollbar-thumb {
@@ -19,17 +24,10 @@ html {
     background: #45a049; 
   }
   
-  ::-webkit-scrollbar-corner {
-    background: transparent; 
-  }
   
-  body {
-    margin: 0;
-    overflow-y: auto;
-  }
-  
+
   ::-webkit-scrollbar {
-    width: 15px;
+    width: 10px;
   }
   
   ::-webkit-scrollbar-thumb {

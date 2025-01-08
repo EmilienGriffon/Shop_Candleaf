@@ -1,0 +1,82 @@
+[
+    {
+        "id": 1,
+        "title": "Menthe épicée",
+        "description": "Une bougie parfumée à la Menthe épicée qui apporte une ambiance rafraîchissante et énergisante. Parfaite pour revigorer vos journées.",
+        "price": "15€",
+        "image": "bougie1",
+        "weight": "250g",
+        "size": "10x10x12 cm",
+        "burningTime": "40h"
+    },
+    {
+        "id": 2,
+        "title": "Fraise sucrée",
+        "description": "Une bougie parfumée à la Fraise sucrée, idéale pour ajouter une touche fruitée et douce à votre intérieur. Relaxante et chaleureuse.",
+        "price": "18€",
+        "image": "bougie2",
+        "weight": "300g",
+        "size": "11x11x13 cm",
+        "burningTime": "45h"
+    },
+    {
+        "id": 3,
+        "title": "Myrtilles Fraîches",
+        "description": "Une bougie parfumée aux arômes de myrtilles fraîches. Un parfum fruité et boisé qui évoque l'été et la nature.",
+        "price": "20€",
+        "image": "bougie3",
+        "weight": "280g",
+        "size": "10x10x14 cm",
+        "burningTime": "50h"
+    },
+    {
+        "id": 4,
+        "title": "Citron juteux",
+        "description": "Une bougie parfumée au Citron juteux, idéale pour apporter une touche de fraîcheur et d'énergie à votre espace. Parfait pour les matinées dynamiques.",
+        "price": "15€",
+        "image": "bougie4",
+        "weight": "230g",
+        "size": "9x9x11 cm",
+        "burningTime": "35h"
+    },
+    {
+        "id": 5,
+        "title": "Orange Fraîches",
+        "description": "Une bougie au parfum d'orange fraîche, qui emplit la pièce de notes fruitées et sucrées. Elle vous apportera une atmosphère joyeuse et apaisante.",
+        "price": "16€",
+        "image": "bougie5",
+        "weight": "270g",
+        "size": "10x10x12 cm",
+        "burningTime": "40h"
+    },
+    {
+        "id": 6,
+        "title": "Cannelle parfumée",
+        "description": "La cannelle est un parfum chaud et épicé, qui ajoute une sensation de confort et de bien-être. Cette bougie crée une ambiance cosy, idéale pour l'automne et l'hiver.",
+        "price": "15€",
+        "image": "bougie6",
+        "weight": "260g",
+        "size": "10x10x12 cm",
+        "burningTime": "42h"
+    },
+    {
+        "id": 7,
+        "title": "Cerises d'été",
+        "description": "Une bougie au parfum doux et sucré de cerises fraîches. Parfaite pour une ambiance estivale et relaxante, elle emplit votre intérieur de chaleur.",
+        "price": "17€",
+        "image": "bougie7",
+        "weight": "290g",
+        "size": "11x11x13 cm",
+        "burningTime": "48h"
+    },
+    {
+        "id": 8,
+        "title": "Lavande propre",
+        "description": "Une bougie parfumée à la lavande, qui crée une atmosphère apaisante et relaxante. Le parfum frais et floral vous aide à vous détendre après une longue journée.",
+        "price": "18€",
+        "image": "bougie8",
+        "weight": "300g",
+        "size": "12x12x14 cm",
+        "burningTime": "55h"
+    }
+]
