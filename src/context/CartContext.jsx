@@ -22,8 +22,23 @@ export const CartProvider = ({ children }) => {
     setCart(newCart);
   };
 
+  const updateQuantity = (productId, quantity) => {
+    const newCart = cart.map(item => 
+      item.id === productId ? { ...item, quantity: Math.max(1, quantity) } : item
+    );
+    setCart(newCart);
+  };
+
+  const getTotalPrice = () => {
+    return cart.reduce((total, item) => {
+      const price = parseFloat(item.price) || 0;
+      const quantity = parseInt(item.quantity) || 1;
+      return total + (price * quantity);
+    }, 0);
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, updateQuantity, getTotalPrice }}>
       {children}
     </CartContext.Provider>
   );

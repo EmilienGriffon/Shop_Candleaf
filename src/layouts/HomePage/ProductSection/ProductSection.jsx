@@ -1,28 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { Box, Typography, Container } from "@mui/material";
 import { Link } from "react-router-dom"; 
-
-import bougie1 from "../../../assets/bougies/bougie1.png";
-import bougie2 from "../../../assets/bougies/bougie2.png";
-import bougie3 from "../../../assets/bougies/bougie3.png";
-import bougie4 from "../../../assets/bougies/bougie4.png";
-import bougie5 from "../../../assets/bougies/bougie5.png";
-import bougie6 from "../../../assets/bougies/bougie6.png";
-import bougie7 from "../../../assets/bougies/bougie7.png";
-import bougie8 from "../../../assets/bougies/bougie8.png";
-import "./ProductSection.scss";
+import { imageMap } from "../../../context/ImageMapContext";
 import productsData from "../../../data/products.json";
-
-const imageMap = {
-    "bougie1": bougie1,
-    "bougie2": bougie2,
-    "bougie3": bougie3,
-    "bougie4": bougie4,
-    "bougie5": bougie5,
-    "bougie6": bougie6,
-    "bougie7": bougie7,
-    "bougie8": bougie8,
-};
+import "./ProductSection.scss";
 
 export default function ProductSection() {
     const [products, setProducts] = useState([]);

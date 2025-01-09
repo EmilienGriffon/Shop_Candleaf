@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CardMedia, CardContent, Typography, Button, Container, Grid, TextField, Box } from '@mui/material';
 import { useCart } from '../../context/CartContext';  
-import { imageMap } from '../ProductPage/ProductPage';
+import { imageMap } from '../../context/ImageMapContext';
 import productsData from '../../data/products.json';
 import './ProductPageById.scss';
 import ResponsiveAppBar from '../../components/ResponsiveAppBar/ResponsiveAppBar';
