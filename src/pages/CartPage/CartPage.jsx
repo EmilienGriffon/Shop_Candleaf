@@ -1,5 +1,6 @@
 import React from "react";
 import { useCart } from "../../context/CartContext";
+import { Link } from "react-router-dom";
 import { Container, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, IconButton, Button, TextField, Typography, Box } from "@mui/material";
 import DeleteIcon from "@mui/icons-material/Delete";
 import ResponsiveAppBar from "../../components/ResponsiveAppBar/ResponsiveAppBar";
@@ -61,7 +62,7 @@ export default function CartPage() {
 
             <Box sx={{ display: "flex", justifyContent: "space-between", alignItems: "center", mt: 3 }}>
               <Typography variant="h5">Total : {getTotalPrice().toFixed(2)}€</Typography>
-              <Button variant="contained" color="primary">Procéder au paiement</Button>
+              <Button variant="contained" color="primary" component={Link} to={'/checkout'} >Procéder au paiement</Button>
             </Box>
           </>
         )}
