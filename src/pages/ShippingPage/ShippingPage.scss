@@ -1,4 +1,15 @@
 .shipping-page {
+  .pagination {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    strong {
+      color: #56B280;
+      font-weight: 500;
+    }
+  }
     .container {
       margin-top: 40px;
       display: flex;
@@ -9,21 +20,73 @@
     .left-section, .right-section {
       flex: 1;
       padding: 20px;
-      background-color: #f9f9f9;
+      background-color: #ededed;
       border-radius: 8px;
       box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      height: 80vh;
     }
   
     .left-section {
+      h5 {
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        color: #272727;
+      }
+      
+      .section-shipping-address {
+        margin-top: 15px;
+        padding: 10px;
+        margin-bottom: 10px;
+        border:  1px solid #ccc;
+        font-size: 15px;
+        font-weight: 300;
+        border-radius: 5px;
+      }
         .section-subtitle {
-            margin-top: 15px;
-            padding: 10px;
-            margin-bottom: 10px;
-            border:  2px solid red;
+          font-size: 15px;
+          font-weight: 300;
+          padding: 5px;
+          color: #272727;
+
+          &__1 {
+            border-bottom: 1px solid #ccc;
             font-size: 15px;
             font-weight: 300;
-            border-radius: 5px;
+            padding: 5px;
+            color: #272727;
+          }
         }
+
+
+      .section-shipping-method {
+        margin-top: 15px;
+        font-size: 15px;
+        font-weight: 300;
+        border-radius: 5px;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+        
+        .section-method-subtitle {
+          font-family: "Roboto", sans-serif;
+          font-size: 20px;
+          color: #272727;
+        }
+
+        .method-selection {
+          padding: 10px;
+
+          .css-13lvt8g-MuiButtonBase-root-MuiRadio-root.Mui-checked {
+            color: #56B280;
+          }
+          &__1, &__2 {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 10px;
+          }
+        }
+      }
     }
     .right-section {
       .order-summary-item {
@@ -35,6 +98,21 @@
         background-color: #fff;
         border-radius: 8px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+        .css-1g05v71-MuiBadge-badge {
+          background-color:#56B280;
+        }
+        .product-title {
+          font-family: "Roboto", sans-serif;
+          font-weight: 500;
+          font-size: 16px;
+        }
+        .product-price {
+          font-family: "Roboto", sans-serif;
+          font-weight: 800;
+          font-size: 21px;
+          color: #56B280;
+        }
       }
   
       .price-section {

@@ -43,19 +43,24 @@ export default function ShippingPage() {
 
   return (
     <Container className="shipping-page">
+      <Typography variant="h4" className='pagination' >Détails » <strong>Éxpédition »</strong>  Paiement </Typography>
+      
       <Grid container spacing={2} className="container">
         
         <Grid item xs={12} md={6} className="left-section">
           <Typography variant="h5" className="section-title">Informations de Livraison</Typography>
+          <Grid  className="section-shipping-address">
+            <Typography variant="h6" className="section-subtitle__1">Contact : {formData.email}</Typography>
+            <Typography variant="h6" className="section-subtitle">Adresse : {formData.address}, {`${formData.city}, ${formData.postalCode}`}</Typography>
+          </Grid>
 
-          <Typography variant="h6" className="section-subtitle">Email : {formData.email}</Typography>
-          <Typography variant="h6" className="section-subtitle">Ship to : {formData.address}, {`${formData.city}, ${formData.postalCode}`}</Typography>
-
-          <Typography variant="h6" className="section-subtitle">Méthode de Livraison</Typography>
-          <RadioGroup value={shippingMethod} onChange={handleShippingMethodChange} className="method-selection">
-            <FormControlLabel value="standard" control={<Radio />} label="Livraison standard (5€)" />
-            <FormControlLabel value="express" control={<Radio />} label="Livraison express (15€)" />
-          </RadioGroup>
+          <Grid container spacing={2} className='section-shipping-method'>
+            <Typography variant="h6" className="section-method-subtitle">Méthode de Livraison</Typography>
+            <RadioGroup value={shippingMethod} onChange={handleShippingMethodChange} className="method-selection">
+              <FormControlLabel value="standard" className='method-selection__1' control={<Radio />} label="Livraison standard (5€)" />
+              <FormControlLabel value="express" className='method-selection__2' control={<Radio />} label="Livraison express (15€)" />
+            </RadioGroup>
+          </Grid>
 
           {!isValidAddress && (
             <Typography variant="body1" color="error" className="error-text">
@@ -74,7 +79,7 @@ export default function ShippingPage() {
             return (
               <Box key={item.id} className="order-summary-item">
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                  <Badge badgeContent={quantity} color="secondary" >
+                  <Badge badgeContent={quantity} color="success" >
                     <img src={imageMap[item.image]} alt={item.title} width={100} style={{ position: 'relative' }} />
                   </Badge>
                   <Box sx={{ ml: 2 }}>

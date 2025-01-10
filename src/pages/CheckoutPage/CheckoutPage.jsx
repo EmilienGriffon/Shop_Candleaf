@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { imageMap } from '../../context/ImageMapContext';
 import './CheckoutPage.scss';
 
+
 export default function CheckoutPage() {
   const { cart, getTotalPrice } = useCart();
   const navigate = useNavigate();
@@ -23,10 +24,8 @@ export default function CheckoutPage() {
     phone: ''
   });
 
-  // Liste des pays pour l'exemple
   const countries = ["France", "Germany", "United_States", "Spain", "Italy", "Canada", "Australia"];
 
-  // Exemple de provinces pour un pays donné
   const provinces = {
     France: ["Île-de-France", "Provence-Alpes-Côte d'Azur", "Nouvelle-Aquitaine", "Occitanie", "Pays de la Loire", "Bretagne", "Centre-Val de Loire"],
     Germany: ["Bavaria", "Berlin", "Hessen", "North Rhine-Westphalia", "Saxony", "Baden-Württemberg", "Lower Saxony"],
@@ -45,15 +44,15 @@ export default function CheckoutPage() {
     }));
   };
 
-  // Fonction pour sauvegarder les données dans le localStorage
   const saveFormData = () => {
     localStorage.setItem('formData', JSON.stringify(formData));
-    navigate("/shipping"); // Redirige vers la page de livraison
+    navigate("/shipping"); 
   };
 
   return (
     <>
       <Container className="checkout-page">
+          <Typography variant="h4" className='pagination' > <strong>Détails »</strong> Éxpédition » Paiement </Typography>
         <Grid container spacing={2} className="container">
           <Grid item xs={12} md={6} className="left-section">
             <Typography variant="h5" gutterBottom>Adresse de Livraison</Typography>
@@ -100,9 +99,9 @@ export default function CheckoutPage() {
               </Grid>
             </Grid>
 
-            <Box sx={{ display: 'flex', gap: 2, mt: 3 }}>
-              <Button variant="outlined" component={Link} to={"/cart"} >Retour au panier</Button>
-              <Button variant="contained" color="primary" onClick={saveFormData}>Accéder à l'expédition</Button>
+            <Box sx={{ display: 'flex', gap: 2, mt: 3 }} className="button-section-checkout">
+              <Button variant="outlined" component={Link} to={"/cart"} className='button-checkout-cart' >Retour au panier</Button>
+              <Button variant="contained" className='button-checkout-shipping' onClick={saveFormData}>Accéder à l'expédition</Button>
             </Box>
           </Grid>
 
@@ -116,7 +115,7 @@ export default function CheckoutPage() {
                 <Box key={item.id} className="order-summary-item">
                   <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <img src={imageMap[item.image]} alt={item.title} width={100} />
-                    <Badge badgeContent={quantity} color="primary" className='badge_disposition'></Badge>
+                    <Badge badgeContent={quantity} color='success' className='badge_disposition'></Badge>
                     <Box sx={{ ml: 2 }}>
                       <Typography className="product-title">{item.title}</Typography>
                       <Typography className="product-price">{(price * quantity).toFixed(2)}€</Typography>
@@ -128,13 +127,13 @@ export default function CheckoutPage() {
 
             <Box className="coupon-section">
               <TextField label="Code promo" fullWidth variant="outlined" size="small" />
-              <Button variant="contained" color="success" sx={{ mt: 1 }}>Appliquer le coupon</Button>
+              <Button variant="contained" className='button__coupon' sx={{ mt: 1 }}>Appliquer le coupon</Button>
             </Box>
 
             <Box className="price-section">
               <Typography variant="h6">Total: {(getTotalPrice()).toFixed(2)}€</Typography>
               <Typography variant="h6">Livraison : Calculé à l'étape suivante</Typography>
-              <Typography variant="h5">Totaux: {(getTotalPrice()).toFixed(2)}€</Typography>
+              <Typography variant="h6">Totaux: {(getTotalPrice()).toFixed(2)}€</Typography>
             </Box>
           </Grid>
         </Grid>
