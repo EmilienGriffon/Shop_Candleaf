@@ -1,0 +1,80 @@
+.navbar {
+    margin-left: -10px;
+    background-color: #f2f2f9 !important;
+    box-shadow: 5px 0px 15px rgba(0, 0, 0, 0.1);
+  
+    .navbar-toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+    }
+  
+    .navbar-menu-icon {
+      display: block;
+      position: absolute;
+      left: 0;
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  
+    .navbar-logo {
+      display: none;
+      @media (min-width: 768px) {
+        display: flex;
+      }
+    }
+  
+    .navbar-logo-text {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: green;
+    }
+  
+    .navbar-cart-icon {
+      display: flex;
+      position: absolute;
+      right: 0;
+      @media (min-width: 768px) {
+      }
+    }
+  
+    .navbar-links {
+      display: none;
+      @media (min-width: 768px) {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-grow: 1;
+      }
+    }
+  
+    .navbar-link {
+      color: black;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      &:hover {
+        transition: all 0.3s ease;
+        color: #00a803;
+        text-decoration: underline;
+        text-decoration-color: #00a803;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 25px;
+      }
+    }
+  
+    .mobile-menu {
+      display: block;
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  
+  .badge-cart-icon-color {
+    .MuiBadge-dot {
+      background-color: #56B280;
+    }
+  }
+  

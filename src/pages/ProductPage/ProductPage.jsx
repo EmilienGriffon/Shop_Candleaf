@@ -23,7 +23,7 @@ export default function ProductPage() {
         <Grid container spacing={3} justifyContent="center">
           {products.map((product) => (
             <Grid item key={product.id} xs={12} sm={6} md={4}>
-              <Card className="product-card" sx={{backgroundColor: "#dedede", boxShadow: "none" , transition: "0.3s"}}>
+              <Card className="product-card" sx={{backgroundColor: "#F7F8FA", boxShadow: "none" , transition: "0.3s"}}>
               <CardMedia component="img" height="200" image={imageMap[product.image]} alt={product.title} />
               <CardContent>
                   <Typography variant="h6">{product.title}</Typography>

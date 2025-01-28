@@ -15,10 +15,16 @@
   }
   
   .product-card {
+    background-color: #F7F8FA;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 
     &:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     }
   
     .MuiCardMedia-root {
@@ -33,12 +39,8 @@
   
   .product-button {
     margin-top: 10px;
-    background-color: #ff6f61;
+    background-color: #56B280!important;
     color: white;
     font-weight: bold;
   
-    &:hover {
-      background-color: #e85b50;
-    }
   }
-  

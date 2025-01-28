@@ -21,8 +21,7 @@ export default function FooterSection() {
               <Typography variant="h6" color="white" fontWeight="bold" gutterBottom> Liens utiles </Typography>
               <Box>
                 <Link href="/" color="#fff" variant="body2" display="block" gutterBottom> Accueil </Link>
-                <Link href="/about" color="#fff" variant="body2" display="block" gutterBottom> À propos </Link>
-                <Link href="/products" color="#fff" variant="body2" display="block" gutterBottom> Nos produits </Link>
+                <Link href="/products" color="#fff" variant="body2" display="block" gutterBottom> Produits </Link>
                 <Link href="/contact" color="#fff" variant="body2" display="block" gutterBottom> Contact </Link>
               </Box>
             </Box>

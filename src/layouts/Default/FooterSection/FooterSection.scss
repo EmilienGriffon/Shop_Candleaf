@@ -18,6 +18,10 @@
         display: flex;
         gap: 15px;
         margin-top: 10px;
+        @media screen and (max-width: 768px) {
+          justify-content: center;
+          
+        }
   
         .footer__social-icon {
           font-size: 24px;

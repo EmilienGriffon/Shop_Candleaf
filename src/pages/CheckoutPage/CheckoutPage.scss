@@ -1,175 +1,215 @@
 .checkout-page {
-    .pagination {
-      font-family: "Roboto", sans-serif;
-      text-transform: uppercase;
-      margin-top: 50px;
-      font-size: 16px;
+  .pagination {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    margin-top: 50px;
+    font-size: 16px;
+    font-weight: 500;
+    strong {
+      color: #56B280;
       font-weight: 500;
-      strong {
-        color: #56B280;
-        font-weight: 500;
-      }
     }
-    .container {
-      margin-top: 40px;
-      display: flex;
-      flex-direction: row;
-      gap: 30px;
-    }
-  
-    .left-section, .right-section {
-      flex: 1;
-      padding: 20px;
-      background-color: #ededed;
-      border-radius: 8px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-      height: 80vh;
+  }
 
+  .container {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
     }
-  
-    .left-section {
-      h5 {
-        font-family: "Roboto", sans-serif;
-        font-size: 20px;
-        color: #272727;
-      }
-      .MuiTextField-root {
-        margin-bottom: 16px;
-      }
-  
-      .MuiButton-outlined {
-        margin-top: 20px;
-        width: 48%;
-      }
-  
-      .MuiButton-contained {
-        margin-top: 20px;
-        width: 48%;
-        background-color: #1976d2;
-        color: white;
-      }
-    }
-  
-    .right-section {
-      .order-summary-item {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 16px;
-        padding: 10px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
 
-        .css-1g05v71-MuiBadge-badge {
-          background-color:#56B280;
-        }
-        .product-title {
-          font-family: "Roboto", sans-serif;
-          font-weight: 500;
-          font-size: 16px;
-        }
-        .product-price {
-          font-family: "Roboto", sans-serif;
-          font-weight: 800;
-          font-size: 21px;
-          color: #56B280;
-        }
-      }
-  
+  .left-section, .right-section {
+    flex: 1;
+    padding: 20px;
+    background-color: #ededed;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: auto;
 
-      .coupon-section {
-        margin-top: 20px;
-        display: flex;
-        flex-direction: column;
-        .button__coupon {
-          background-color: #56B280;
-        }
-      }
-  
-      .price-section {
-        border-top: 1px solid #ccc;
-        border-bottom: 1px solid #ccc;
-        font-family: "Roboto", sans-serif;
-        font-size: 14px;
-        color: #616161;
-        margin-top: 50px;
-        padding: 15px;
-  
-        .MuiTypography-root {
-          margin-bottom: 10px;
-        }
-      }
+    @media (max-width: 768px) {
+      height: auto;
+      margin-bottom: 20px;
     }
-  
-    .MuiTypography-h5 {
-      font-weight: bold;
+  }
+
+  .left-section {
+    h5 {
+      font-family: "Roboto", sans-serif;
+      font-size: 20px;
+      color: #272727;
     }
-  
-    .MuiBadge-dot {
-      background-color: #1976d2;
-    }
-  
+
     .MuiTextField-root {
-      background-color: #fff;
-      border-radius: 4px;
+      margin-bottom: 16px;
     }
-  
+
+    .MuiButton-outlined {
+      margin-top: 20px;
+      width: 48%;
+    }
+
+    .MuiButton-contained {
+      margin-top: 20px;
+      width: 48%;
+      background-color: #1976d2;
+      color: white;
+    }
+  }
+
+  .right-section {
     .order-summary-item {
-      img {
-        width: 150px;
-        border-radius: 4px;
-        background-color: #ececec;
-      }
-  
-      .order-item-info {
-        margin-left: 10px;
-        flex: 1;
-  
-        .product-title {
-          font-size: 16px;
-          font-weight: bold;
-        }
-  
-        .product-price {
-          font-size: 14px;
-          color: #555;
-        }
-  
-        .quantity {
-          font-size: 12px;
-          color: #888;
-          position: relative;
-          left: 15px;
-        }
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+      .css-1g05v71-MuiBadge-badge {
+        background-color: #56B280;
       }
 
-      .badge_disposition {
-        position: relative;
-        bottom: 50px;
+      .product-title {
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
       }
-    }
-  
-    .coupon-section {
-      .MuiTextField-root {
-        margin-bottom: 10px;
-      }
-  
-    }
-  
-    .button-section-checkout {
-      .button-checkout-cart {
+
+      .product-price {
+        font-family: "Roboto", sans-serif;
+        font-weight: 800;
+        font-size: 21px;
         color: #56B280;
-        border-color: #56B280;
       }
-      .button-checkout-shipping {
-        color: #fff;
+    }
+
+    .coupon-section {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      .button__coupon {
         background-color: #56B280;
       }
     }
-    .footer {
+
+    .price-section {
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      color: #616161;
       margin-top: 50px;
-      text-align: center;
+      padding: 15px;
+
+      .MuiTypography-root {
+        margin-bottom: 10px;
+      }
     }
   }
-  
+
+  .MuiTypography-h5 {
+    font-weight: bold;
+  }
+
+  .MuiBadge-dot {
+    background-color: #1976d2;
+  }
+
+  .MuiTextField-root {
+    background-color: #fff;
+    border-radius: 4px;
+  }
+
+  .order-summary-item {
+    img {
+      width: 150px;
+      border-radius: 4px;
+      background-color: #ececec;
+    }
+
+    .order-item-info {
+      margin-left: 10px;
+      flex: 1;
+
+      .product-title {
+        font-size: 16px;
+        font-weight: bold;
+      }
+
+      .product-price {
+        font-size: 14px;
+        color: #555;
+      }
+
+      .quantity {
+        font-size: 12px;
+        color: #888;
+        position: relative;
+        left: 15px;
+      }
+    }
+
+    .badge_disposition {
+      position: relative;
+      bottom: 50px;
+    }
+  }
+
+  .coupon-section {
+    .MuiTextField-root {
+      margin-bottom: 10px;
+    }
+  }
+
+  .button-section-checkout {
+    .button-checkout-cart {
+      color: #56B280;
+      border-color: #56B280;
+    }
+
+    .button-checkout-shipping {
+      color: #fff;
+      background-color: #56B280;
+    }
+  }
+
+  .footer {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .pagination {
+      text-align: center;
+      font-size: 14px;
+      margin-top: 20px;
+    }
+
+    .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .left-section, .right-section {
+      padding: 10px;
+    }
+
+    .right-section .price-section {
+      font-size: 12px;
+    }
+
+    .button-section-checkout .MuiButton-outlined {
+      width: 100%;
+    }
+
+    .button-section-checkout .MuiButton-contained {
+      width: 100%;
+    }
+  }
+}

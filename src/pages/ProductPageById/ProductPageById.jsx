@@ -39,14 +39,14 @@ export default function ProductPageById() {
       <Container className="product-detail-container" sx={{ mt: 4 }}>
         <Grid container spacing={4} justifyContent="center">
           <Grid item xs={12} sm={6} md={4} sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <CardMedia component="img" height="400" image={imageMap[product.image]} alt={product.title} />
+            <CardMedia component="img" height="400" image={imageMap[product.image]} alt={product.title} className="product-image" />
           </Grid>
 
           <Grid item xs={12} sm={6} md={6}>
             <CardContent>
               <Typography variant="h3" gutterBottom>{product.title}</Typography>
               <Typography variant="body1" color="textSecondary" paragraph>{product.description}</Typography>
-              <Typography variant="h5" color="primary" gutterBottom>{product.price}</Typography>
+              <Typography variant="h5" color="#56B280" gutterBottom> <strong>{product.price}</strong></Typography>
               <Box mb={5}>
                 <TextField label="Quantité" type="number" value={quantity} onChange={(e) => setQuantity(e.target.value)} inputProps={{ min: 1 }} variant="outlined" fullWidth />
               </Box>
@@ -58,7 +58,7 @@ export default function ProductPageById() {
                   <li><strong>Temps de combustion:</strong> {product.burningTime}</li>
                 </ul>
               </Box>
-              <Button variant="contained" color="success" fullWidth onClick={handleAddToCart}>
+              <Button variant="contained" color="success" className='button-add-cart' fullWidth onClick={handleAddToCart}>
                 Ajouter au panier
               </Button>
             </CardContent>
